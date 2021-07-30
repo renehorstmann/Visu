@@ -1,6 +1,8 @@
 # Visu
 3D data viewer, written in C with OpenGL
 
+Based on [Pointc](https://github.com/renehorstmann/Pointc)
+
 ## Author
 
 René Horstmann
