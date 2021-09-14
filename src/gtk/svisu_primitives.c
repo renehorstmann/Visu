@@ -90,9 +90,10 @@ VuRawMesh *svisu_cylinder(SVisu *self, vec3 start_point, vec3 extend,
 
 VuRawMesh *svisu_cone_part_hull(SVisu *self, vec3 start_point, vec3 extend,
                                 float start_radius, float end_radius, vec4 color) {
-    float vertex_density = (start_radius > end_radius? start_radius : end_radius) / 4;
+    float vertex_density = (start_radius > end_radius ? start_radius : end_radius) / 4;
     pCloud points, normals;
-    p_meshprimitives_raw_cone_part_hull(&points, &normals, start_point, extend, start_radius, end_radius, vertex_density);
+    p_meshprimitives_raw_cone_part_hull(&points, &normals, start_point, extend, start_radius, end_radius,
+                                        vertex_density);
     VuRawMesh *ro = svisu_raw_mesh(self, points, normals, color);
     ro->super.kill_user_data = true; // Cloud kill by visu
     return ro;

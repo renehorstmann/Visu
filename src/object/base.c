@@ -102,7 +102,7 @@ const char *vu_render_object_property_type(const VuRenderObject *self, const cha
 const char **vu_render_object_property_names_as_list_on_heap(const VuRenderObject *self) {
     ObjectBase *base = self->impl;
 
-    const char **list = p_rhc_calloc(sizeof (const char *) * (base->properties_size + 1));
+    const char **list = p_rhc_calloc(sizeof(const char *) * (base->properties_size + 1));
     for (int i = 0; i < base->properties_size; i++)
         list[i] = base->properties[i].name;
     return list;

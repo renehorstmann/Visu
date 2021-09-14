@@ -56,12 +56,13 @@ SVisu *svisu_new(bool orthogonal, float opt_coord_length) {
 }
 
 void svisu_kill(SVisu **self_ptr) {
-    if(*self_ptr) {
+    if (*self_ptr) {
         vu_visu_kill(&(*self_ptr)->visu);
     }
     p_rhc_free(*self_ptr);
     *self_ptr = NULL;
 }
+
 void svisu_set_background_color(SVisu *self,
                                 vec3 top_left_color, vec3 top_right_color,
                                 vec3 bottom_left_color, vec3 bottom_right_color) {
@@ -159,7 +160,7 @@ static gboolean key_callback(GtkWidget *widget, GdkEvent *event, gpointer data) 
     // camera home
     if (key == 'h') {
         mat4 home = self->_init_as_orthognal ?
-                            VU_MOUSE_ROTATE_CONTROL_INIT_CENTER_POSE : VU_KEY_FLOW_CONTROL_INIT_POSE;
+                    VU_MOUSE_ROTATE_CONTROL_INIT_CENTER_POSE : VU_KEY_FLOW_CONTROL_INIT_POSE;
         self->visu->opt_control->set_pose(self->visu->opt_control, home);
     }
 
@@ -233,7 +234,7 @@ static void render_function(VuVisu *visu, void *user_data) {
     for (int i = 0; i < self->_render_objects_size; i++)
         vu_render_object_render(self->_render_objects[i]);
 
-    if(self->render_callback)
+    if (self->render_callback)
         self->render_callback(self, self->render_callback_user_data);
 }
 

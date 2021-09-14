@@ -58,10 +58,10 @@ static void gl_msg_callback(GLenum source, GLenum type, GLuint id, GLenum severi
                             GLsizei length, const GLchar *message, const void *userParam);
 
 VuVisu *vu_visu_new(bool orthogonal,
-                   void (*render_function)(VuVisu *visu, void *user_data),
-                   void *render_function_user_data) {
+                    void (*render_function)(VuVisu *visu, void *user_data),
+                    void *render_function_user_data) {
     VuVisu *self = p_rhc_calloc(sizeof *self);
-    
+
     // private
     Visu *impl = p_rhc_calloc(sizeof *impl);
     self->impl = impl;
@@ -92,12 +92,12 @@ VuVisu *vu_visu_new(bool orthogonal,
 
     self->render_function = render_function;
     self->render_function_user_data = render_function_user_data;
-    
+
     return self;
 }
 
 void vu_visu_kill(VuVisu **self_ptr) {
-    if(!*self_ptr)
+    if (!*self_ptr)
         return;
     VuVisu *self = *self_ptr;
     Visu *visu = self->impl;
