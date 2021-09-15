@@ -58,7 +58,7 @@ const char **vu_render_object_property_names_as_list_on_heap(const VuRenderObjec
  * Kills a render object (says Visu to delete it...).
  * This call is not necessary if Visu will be killed also, (Visu will kill all render objects automatically)
  */
-void vu_render_object_kill(VuRenderObject *self);
+void vu_render_object_kill(VuRenderObject **self_ptr);
 
 /**
  * Uses OpenGL-calls to render the object.

@@ -67,7 +67,7 @@ void svisu_set_background_color(SVisu *self,
                                 vec3 top_left_color, vec3 top_right_color,
                                 vec3 bottom_left_color, vec3 bottom_right_color) {
     if (self->_background)
-        vu_render_object_kill(self->_background);
+        vu_render_object_kill(&self->_background);
 
     self->_background = vu_create_background(self->visu,
                                              top_left_color, top_right_color,

@@ -48,9 +48,13 @@ void vu_render_object_init(VuRenderObject *self, VuVisu *visu) {
     vu_visu_add_resource(visu, self->visu_resource);
 }
 
-void vu_render_object_kill(VuRenderObject *self) {
-    ObjectBase *base = self->impl;
-    vu_visu_kill_resource(base->visu, self->visu_resource);
+void vu_render_object_kill(VuRenderObject **self_ptr) {
+    VuRenderObject *self = *self_ptr;
+    if(self) {
+        ObjectBase *base = self->impl;
+        vu_visu_kill_resource(base->visu, self->visu_resource);
+    }
+    *self_ptr = NULL;
 }
 
 void vu_render_object_render(VuRenderObject *self) {
