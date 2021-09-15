@@ -16,15 +16,15 @@ int main() {
 
     pCloud points, normals;
 
-//    p_meshprimitives_raw_cone_part_hull(&points, &normals,
-//                                        (vec3) {{0, 100, 100}},
-//                                        (vec3) {{0, 0, -100}},
-//                                        0, 100, 100);
+    p_meshprimitives_raw_cone_part_hull(&points, &normals,
+                                        (vec3) {{0, 100, 100}},
+                                        (vec3) {{0, 0, -100}},
+                                        0, 100, 100);
 
-    p_meshprimitives_raw_cone_hull(&points, &normals,
-                                   (vec3) {{500, 100, 100}},
-                                   (vec3) {{0, 0, -100}},
-                                   sca_radians(45), 100);
+//    p_meshprimitives_raw_cone_hull(&points, &normals,
+//                                   (vec3) {{500, 100, 100}},
+//                                   (vec3) {{0, 0, -100}},
+//                                   sca_radians(30), 100);
 
 //    p_meshprimitives_raw_cylinder_hull(&points, &normals,
 //                                   (vec3) {{500, 100, 100}},
