@@ -81,15 +81,17 @@ endif()
 
 # Define the executable test
 add_executable(main tests/main.c)
+add_executable(example_show tests/example_show.c)
+add_executable(example_visuwidget tests/example_visuwidget.c)
+add_executable(example_svisu tests/example_svisu.c)
 add_executable(light_tool tests/light_tool.c)
-add_executable(example_visuwidget tests/visuwidget_example.c)
-add_executable(example_svisu tests/svisu_example.c)
 
 # link to the library
 target_link_libraries(main visu)
-target_link_libraries(light_tool visu)
+target_link_libraries(example_show visu)
 target_link_libraries(example_visuwidget visu)
 target_link_libraries(example_svisu visu)
+target_link_libraries(light_tool visu)
 
 
 # add the executable as test
