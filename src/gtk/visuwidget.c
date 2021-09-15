@@ -152,6 +152,9 @@ static gboolean mouse_scroll_callback(GtkWidget *widget, GdkEvent *event, gpoint
     if (self->visu->opt_control == NULL)
         return FALSE;
 
+    if(event->scroll.direction != GDK_SCROLL_UP && event->scroll.direction != GDK_SCROLL_DOWN)
+        return FALSE;
+
     bool up = event->scroll.direction == GDK_SCROLL_UP;
     self->visu->opt_control->mouse_scroll_event(self->visu->opt_control, up);
 
