@@ -5,7 +5,7 @@
 #include "visu/camera/base.h"
 #include "visu/control/base.h"
 
-static const int VU_VISU_INIT_MULTISAMPLE = 4;
+static const int VU_VISU_INIT_MULTISAMPLE = 2;
 static const float VU_VISU_INIT_Z_NEAR = 10;
 static const float VU_VISU_INIT_Z_FAR = 50000;
 
