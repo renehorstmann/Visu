@@ -3,6 +3,32 @@
 
 Based on [pBase](https://github.com/renehorstmann/pbase)
 
+Visu can show various 3D types:
+ - points (point cloud)
+  - points with normals (for shading with light)
+  - points with colors
+  - points with normals and colors
+ - lines (lines, strip, loop modes)
+  - lines with colors
+ - meshs (point cloud + mesh indices, or raw as each 3 points)
+  - meshs with colors
+  - raw mesh with vertex normals
+ - primitivmeshs
+  - plane
+  - box
+  - sphere
+  - halfsphere
+  - cylinder
+  - cone
+  - arrow
+  - 3D-Pose coordination system as arrows
+
+Visu(base) itself is written in OpenGL.
+gtk/visuwidget uses gtk to create a GtkGlArea an renders visu with it.
+So Visu can be easily embedded into a gtk projekt.
+SVisu is a simpler version to use Visu and creates a window with the `svisu_show` call.
+
+
 ## Getting started
 
 ### Install
@@ -28,8 +54,14 @@ target_link_libraries(main ${PBASE_LIB} ${VISU_LIB})
 ```
 
 ### Example
+Simple example to use SVisu (for debugging, etc.).
+
+The following two examples will load an stl mesh and render it together with a transparent sphere in SVisu.
+The mesh will be loaded with [pbase](https://github.com/renehorstmann/pbase).
 ![img](svisu.png)
-[example_show.c](tests/example_show.c) loads an stl mesh with pbase and show it with a transparent sphere
+
+#### C
+[example_show.c](tests/example_show.c)
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -65,7 +97,8 @@ int main() {
 }
 ```
 
-[example_show.py](python/example_show.py) same as above, but in python
+#### Python3
+[example_show.py](python/example_show.py)
 ```python
 import pbase as p
 import visu as vu
@@ -78,6 +111,16 @@ if __name__ == '__main__':
 
 ```
 
+#### Additional Features
+SVisu has some useful additional features:
+ - Add trackbars (like OpenCV)
+ - Add mouse click ray callback (right click the mouse button, to get a 3D ray)
+ - render callback, will be called each frame
+  - process data
+  - use svisus Visu to add a Visu Object for rendering
+ - user defined quit keys
+ - `svisu_show` returns the last pressed key
+ - pressing H should reset the camera
 
 ## Author
 
