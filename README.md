@@ -23,13 +23,13 @@ Visu can show various 3D types:
   - arrow
   - 3D-Pose coordination system as arrows
 
-[Visu(base)](include/visubase.h) itself is written in OpenGL.
+[Visu(base)](include/visu/visubase.h) itself is written in OpenGL.
 
-[gtk/visuwidget](include/gtk/visuwidget.h) uses gtk to create a GtkGlArea and renders visu with it.
+[gtk/visuwidget](include/visu/gtk/visuwidget.h) uses gtk to create a GtkGlArea and renders visu with it.
 
 So Visu can be easily embedded into a gtk projekt.
 
-[SVisu](include/svisu.h) is a simpler version to use Visu and creates a window with the `svisu_show` call.
+[SVisu](include/visu/svisu.h) is a simpler version to use Visu and creates a window with the `svisu_show` call.
 
 
 ## Getting started
