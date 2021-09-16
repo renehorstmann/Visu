@@ -4,16 +4,16 @@
 Based on [pBase](https://github.com/renehorstmann/pbase)
 
 Visu can show various 3D types:
- - points (point cloud)
+- points (point cloud)
   - points with normals (for shading with light)
   - points with colors
   - points with normals and colors
- - lines (lines, strip, loop modes)
+- lines (lines, strip, loop modes)
   - lines with colors
- - meshs (point cloud + mesh indices, or raw as each 3 points)
+- meshs (point cloud + mesh indices, or raw as each 3 points)
   - meshs with colors
   - raw mesh with vertex normals
- - primitivmeshs
+- primitivmeshs
   - plane
   - box
   - sphere
@@ -113,14 +113,14 @@ if __name__ == '__main__':
 
 #### Additional Features
 SVisu has some useful additional features:
- - Add trackbars (like OpenCV)
- - Add mouse click ray callback (right click the mouse button, to get a 3D ray)
- - render callback, will be called each frame
+- Add trackbars (like OpenCV)
+- Add mouse click ray callback (right click the mouse button, to get a 3D ray)
+- render callback, will be called each frame
   - process data
   - use svisus Visu to add a Visu Object for rendering
- - user defined quit keys
- - `svisu_show` returns the last pressed key
- - pressing H should reset the camera
+- user defined quit keys
+- `svisu_show` returns the last pressed key
+- pressing H should reset the camera
 
 ## Author
 
