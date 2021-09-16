@@ -38,7 +38,7 @@ So Visu can be easily embedded into a gtk projekt.
 see [pBase](https://github.com/renehorstmann/pbase) install section.
 
 ### Usage
-To use pbase in your cmake project:
+To use visu (and pbase) in your cmake project:
 ```cmake
 cmake_minimum_required(VERSION 3.0)
 project(visutest C)
