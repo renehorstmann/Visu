@@ -24,8 +24,11 @@ Visu can show various 3D types:
   - 3D-Pose coordination system as arrows
 
 Visu(base) itself is written in OpenGL.
-gtk/visuwidget uses gtk to create a GtkGlArea an renders visu with it.
+
+gtk/visuwidget uses gtk to create a GtkGlArea and renders visu with it.
+
 So Visu can be easily embedded into a gtk projekt.
+
 SVisu is a simpler version to use Visu and creates a window with the `svisu_show` call.
 
 
