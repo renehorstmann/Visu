@@ -122,6 +122,20 @@ SVisu has some useful additional features:
 - `svisu_show` returns the last pressed key
 - pressing H should reset the camera
 
+#### Camera control
+Visu comes with two 3D cameras: orthogonal and perspective.
+- Perspective Camera:
+  - Use `WASD` to move the camera position
+  - Mouse x and y rotates the camera via its x and y axis
+  - `QE` rotates the camera via its Z axis
+  - `XY` let the camera move up and down
+  - The mouse wheel can speed up or lower the move speed
+- Orthogonal Camera:
+  - The camera will look at a center_pose, which will be at 000 at the start.
+  - Mouse x and y rotates the camera around the center pose
+  - The mouse will will zoom in and out
+  - Holding the mouse wheel and moving the mouse (x and y) will shift the center_pose
+
 ## Author
 
 René Horstmann
