@@ -35,7 +35,7 @@ SVisu is a simpler version to use Visu and creates a window with the `svisu_show
 ## Getting started
 
 ### Install
-see pbase install section.
+see [pBase](https://github.com/renehorstmann/pbase) install section.
 
 ### Usage
 To use pbase in your cmake project:
