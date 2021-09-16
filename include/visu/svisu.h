@@ -15,7 +15,7 @@
  *     SVisu *sv = svisu_new(true, 100);
  *
  *     // load a sphere into SVisu at x=100, y=100, z=0 with a radius of 50 in yellow color [mm]
- *     svisu_sphere(sv, (vec3) {{100, 100, 0}}, 50, SV_YELLOW.rgb);
+ *     svisu_sphere(sv, (vec3) {{100, 100, 0}}, 50, SV_YELLOW);
  *
  *     // show up SVisu window (gtk window)
  *     svisu_show(sv);
