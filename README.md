@@ -124,6 +124,7 @@ SVisu has some useful additional features:
 - user defined quit keys
 - `svisu_show` returns the last pressed key
 - pressing H should reset the camera
+- change background color (A white background is better for printing, etc.)
 
 #### Camera control
 Visu comes with two 3D cameras: orthogonal and perspective.
