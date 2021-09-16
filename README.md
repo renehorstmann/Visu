@@ -140,6 +140,11 @@ Visu comes with two 3D cameras: orthogonal and perspective.
   - The mouse will will zoom in and out
   - Holding the mouse wheel and moving the mouse (x and y) will shift the center_pose
 
+# Todo
+- SDL port as addition to gtk
+  - using [some](https://github.com/renehorstmann/some) framework
+  - with Emscripten-WebGL2 support
+
 ## Author
 
 René Horstmann
