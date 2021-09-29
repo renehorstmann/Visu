@@ -15,7 +15,7 @@ int main() {
             true,   // true=orthogonal camera, false=perspective camera
             10      // length of coordination system arrows (<=0 to turn off)
     );
-    svisu_mesh(sv, points, indices, SV_WHITE);
+    svisu_mesh(sv, points, indices, VU_WHITE);
     svisu_sphere(sv,
                  (vec3) {{10, 10, 75}},     // mid pos
                  10,                        // radius
