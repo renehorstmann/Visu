@@ -138,7 +138,7 @@ int main() {
     pCloud linestrip = {(vec4*) strip, 91};
 
     SVisu *sv = svisu_new(false, 10);
-    svisu_set_background_color(sv, SV_WHITE.rgb, SV_GREEN.rgb, SV_BLUE.rgb, SV_RED.rgb);
+    svisu_set_background_color(sv, VU_WHITE.rgb, VU_GREEN.rgb, VU_BLUE.rgb, VU_RED.rgb);
 
     sv->mouse_ray_callback = mouse_ray_callback;
     sv->render_callback = render_callback;
@@ -147,10 +147,10 @@ int main() {
 
     svisu_points(sv, points, (vec4) {{1, 0, 1, 1}}, 10);
 
-    svisu_sphere(sv, (vec3) {{300, 0, 0}}, 50, SV_GREEN);
-    svisu_arrow_swapped(sv, (vec3) {{-300, 0, 0}}, (vec3) {{100, 0, 0}}, 2, SV_CYAN);
+    svisu_sphere(sv, (vec3) {{300, 0, 0}}, 50, VU_GREEN);
+    svisu_arrow_swapped(sv, (vec3) {{-300, 0, 0}}, (vec3) {{100, 0, 0}}, 2, VU_CYAN);
 
-    svisu_lines(sv, linestrip, SV_RED, 1, VU_LINE_MODE_LINE_LOOP);
+    svisu_lines(sv, linestrip, VU_RED, 1, VU_LINE_MODE_LINE_LOOP);
 
     char key = svisu_show(sv);
     printf("key: %c\n", key);
