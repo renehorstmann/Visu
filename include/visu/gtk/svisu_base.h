@@ -14,14 +14,6 @@
 #define SVISU_MAX_TRACKBARS 8
 #define SVISU_MAX_RENDER_OBJECTS 1024
 
-static const vec4 SV_WHITE = {{1, 1, 1, 1}};
-static const vec4 SV_BLACK = {{0, 0, 0, 1}};
-static const vec4 SV_RED = {{1, 0, 0, 1}};
-static const vec4 SV_GREEN = {{0, 1, 0, 1}};
-static const vec4 SV_BLUE = {{0, 0, 1, 1}};
-static const vec4 SV_YELLOW = {{1, 1, 0, 1}};
-static const vec4 SV_CYAN = {{0, 1, 1, 1}};
-static const vec4 SV_MAGENTA = {{1, 0, 1, 1}};
 
 struct VuRenderObject;
 typedef struct SVisu SVisu;
