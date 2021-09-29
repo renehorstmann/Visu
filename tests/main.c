@@ -42,9 +42,9 @@ int main() {
     }
 
     SVisu *sv = svisu_new(true, 0);
-    svisu_sphere(sv, (vec3) {{100, 0, 0}}, 50, SV_WHITE);
-    svisu_raw_mesh(sv, points, normals, SV_RED);
-    svisu_lines(sv, normal_lines, SV_GREEN, 1, VU_LINE_MODE_LINES);
+    svisu_sphere(sv, (vec3) {{100, 0, 0}}, 50, VU_WHITE);
+    svisu_raw_mesh(sv, points, normals, VU_RED);
+    svisu_lines(sv, normal_lines, VU_GREEN, 1, VU_LINE_MODE_LINES);
     svisu_show(sv);
     svisu_kill(&sv);
 
