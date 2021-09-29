@@ -5,6 +5,16 @@
 #include "visu/camera/base.h"
 #include "visu/control/base.h"
 
+static const vec4 VU_WHITE = {{1, 1, 1, 1}};
+static const vec4 VU_BLACK = {{0, 0, 0, 1}};
+static const vec4 VU_RED = {{1, 0, 0, 1}};
+static const vec4 VU_GREEN = {{0, 1, 0, 1}};
+static const vec4 VU_BLUE = {{0, 0, 1, 1}};
+static const vec4 VU_YELLOW = {{1, 1, 0, 1}};
+static const vec4 VU_CYAN = {{0, 1, 1, 1}};
+static const vec4 VU_MAGENTA = {{1, 0, 1, 1}};
+
+
 static const int VU_VISU_INIT_MULTISAMPLE = 2;
 static const float VU_VISU_INIT_Z_NEAR = 10;
 static const float VU_VISU_INIT_Z_FAR = 50000;
