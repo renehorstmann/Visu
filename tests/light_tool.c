@@ -40,7 +40,7 @@ int main() {
 
     SVisu *sv = svisu_new(true, 100);
 
-    VuRawMesh *ro = svisu_sphere(sv, (vec3) {{0, 0, 0}}, 100, SV_WHITE);
+    VuRawMesh *ro = svisu_sphere(sv, (vec3) {{0, 0, 0}}, 100, VU_WHITE);
     ro->super.on_kill_callback = on_sphere_kill;
 
     svisu_add_trackbar(sv, (SVisuTrackbar) {"x", -1, 1, 0.01, VU_LIGHT_SOURCE_INIT.x, source_x, ro});

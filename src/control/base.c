@@ -1,4 +1,4 @@
-#include <pbase/rhc/allocator.h>
+#include <pbase/rhc/alloc.h>
 #include "visu/control/base.h"
 
 

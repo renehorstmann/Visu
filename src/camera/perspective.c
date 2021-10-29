@@ -1,4 +1,4 @@
-#include <pbase/rhc/allocator.h>
+#include <pbase/rhc/alloc.h>
 #include <pbase/mathc/float.h>
 #include <pbase/mathc/utils/camera.h>
 #include "visu/camera/perspective.h"

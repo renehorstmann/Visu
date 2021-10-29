@@ -3,7 +3,7 @@
 
 #include <epoxy/gl.h>
 
-#include <pbase/rhc/allocator.h>
+#include <pbase/rhc/alloc.h>
 #include <pbase/mathc/float.h>
 
 #include "visu/visubase.h"

@@ -1,7 +1,7 @@
 #include <gtk/gtk.h>
 
 #include <pbase/rhc/log.h>
-#include <pbase/rhc/allocator.h>
+#include <pbase/rhc/alloc.h>
 #include <pbase/mathc/float.h>
 #include "visu/control/keyflow.h"
 #include "visu/control/mouserotate.h"

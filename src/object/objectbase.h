@@ -6,7 +6,7 @@
 #include <string.h>
 
 #include <pbase/mathc/float.h>
-#include <pbase/rhc/allocator.h>
+#include <pbase/rhc/alloc.h>
 
 #include "visu/visubase.h"
 #include "visu/object/base.h"
