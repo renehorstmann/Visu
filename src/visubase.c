@@ -1,12 +1,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
-#include <string.h>
-#include <time.h>
 
 #include <epoxy/gl.h>
 
 #include <pbase/rhc/log.h>
 #include <pbase/rhc/alloc.h>
+#include <pbase/rhc/time.h>
 #include <pbase/mathc/float.h>
 
 #include "visu/camera/perspective.h"
@@ -18,12 +17,6 @@
 
 #define PRELOG "[Visu] "
 
-
-static double monotonic() {
-    struct timespec time;
-    clock_gettime(CLOCK_MONOTONIC, &time);
-    return (double) time.tv_sec + (double) time.tv_nsec / 1000000000.0;
-}
 
 typedef struct Visu {
     double time;
@@ -156,7 +149,7 @@ void vu_visu_realize(VuVisu *self) {
     glGenVertexArrays(1, &visu->vao);
     glBindVertexArray(visu->vao);
 
-    visu->time = monotonic();
+    visu->time = time_monotonic();
 }
 
 void vu_visu_unrealize(VuVisu *self) {
@@ -183,7 +176,7 @@ void vu_visu_unrealize(VuVisu *self) {
 void vu_visu_render(VuVisu *self, int width, int height) {
     Visu *visu = self->impl;
 
-    double start_time = monotonic();
+    double start_time = time_monotonic();
     double delta_time = start_time - visu->time;
     visu->time = start_time;
 
