@@ -6,7 +6,7 @@
 int main() {
     pCloud points;
     pMeshIndices indices;
-    if (p_io_load_mesh_stl(&points, &indices, "test_io_stl_giraffebinary.stl")) {
+    if (p_io_load_mesh_stl(&points, &indices, "giraffe.stl")) {
         printf("Failed to load mesh: %s", p_error());
         exit(EXIT_FAILURE);
     }
