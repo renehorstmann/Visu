@@ -1,6 +1,9 @@
 # Visu
 3D data viewer, written in C with OpenGL
 
+> This is my old 3D viewer I once used for 3d machine vision.
+> I will left it here at github to show what I once coded.
+
 Based on [pBase](https://github.com/renehorstmann/pbase)
 
 Visu can show various 3D types:
